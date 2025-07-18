@@ -60,6 +60,7 @@ def score_range(scored_df):
     
     scored_df['score_range'] = pd.cut(scored_df['credit_score'], bins=bins, labels=labels, right=False)
     score_distribution = scored_df['score_range'].value_counts().sort_index()
+    print("Score Distribution:\n", score_distribution)
    
     # Plotting the score distribution
     import matplotlib.pyplot as plt
